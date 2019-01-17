@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "The crypto primitives used in hypercore, extracted into a separate module",
   "main": "index.js",
+  "react-native": {
+    "crypto": "react-native-crypto",
+    "sodium-universal": "react-native-sodium"
+  },
   "dependencies": {
     "buffer-alloc-unsafe": "^1.1.0",
     "buffer-from": "^1.1.0",
