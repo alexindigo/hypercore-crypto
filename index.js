@@ -1,4 +1,5 @@
 var sodium = require('sodium-universal')
+var rnRandomBytes = require('react-native-randombytes');
 var uint64be = require('uint64be')
 var bufferFrom = require('buffer-from')
 var bufferAlloc = require('buffer-alloc-unsafe')
@@ -76,8 +77,7 @@ exports.tree = function (roots) {
 }
 
 exports.randomBytes = function (n) {
-  var buf = bufferAlloc(n)
-  sodium.randombytes_buf(buf)
+  var buf = rnRandomBytes.randomBytes(n)
   return buf
 }
 
